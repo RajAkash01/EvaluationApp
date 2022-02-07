@@ -53,21 +53,24 @@ function FirstScreen({ navigation }) {
   };
   return (
     <View style={styles.container}>
+      <Text style={{}}>FirstScreen</Text>
       {visible ? (
-        <TouchableOpacity
-          style={{
-            width: 80,
-            height: 50,
-            borderWidth: 1,
-            borderColor: 'grey',
-            borderRadius: 10,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-          onPress={() => fetchdata()}
-        >
-          <Text>Fetch</Text>
-        </TouchableOpacity>
+        <View style={{ top: 300, alignItems: 'center' }}>
+          <TouchableOpacity
+            style={{
+              width: 80,
+              height: 50,
+              borderWidth: 1,
+              borderColor: 'grey',
+              borderRadius: 10,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+            onPress={() => fetchdata()}
+          >
+            <Text>Fetch</Text>
+          </TouchableOpacity>
+        </View>
       ) : null}
     </View>
   );
@@ -76,8 +79,8 @@ const styles = StyleSheet.create({
   container: {
     // paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
 });
 export default FirstScreen;
